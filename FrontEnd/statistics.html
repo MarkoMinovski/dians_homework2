@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stats Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Function to fetch data for the selected ticker and update the table
+        async function fetchTickerData() {
+            const ticker = document.getElementById("selection").value; // Get the selected ticker
+            const statsTable = document.getElementById("stats_table");
+
+            try {
+                // Fetch data from the backend
+                const response = await fetch(`http://127.0.0.1:5000/tickers/${ticker}`);
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+
+                const data = await response.json();
+
+                // Clear previous table rows (except the header)
+                while (statsTable.rows.length > 1) {
+                    statsTable.deleteRow(1);
+                }
+
+                // Populate the table with new data
+                data.forEach(row => {
+                    const newRow = statsTable.insertRow();
+                    newRow.innerHTML = `
+                        <td>${row.date || 'N/A'}</td>
+                        <td>${row.last_trade_price || 'N/A'}</td>
+                        <td>${row.max || 'N/A'}</td>
+                        <td>${row.min || 'N/A'}</td>
+                        <td>${row.avg || 'N/A'}</td>
+                        <td>${row.percentage_change_decimal || 'N/A'}</td>
+                        <td>${row.vol || 'N/A'}</td>
+                        <td>${row.BEST_turnover || 'N/A'}</td>
+                        <td>${'N/A'}</td> <!-- Placeholder for Total turnover -->
+                    `;
+                });
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                alert("Failed to fetch ticker data. Please try again later.");
+            }
+        }
+
+        // Attach the fetch function to the dropdown selection change
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdown = document.getElementById("selection");
+            dropdown.addEventListener("change", fetchTickerData);
+
+            // Initial fetch for the default selected value
+            fetchTickerData();
+        });
+    </script>
+</head>
+<body>
+<p id="top_Gray"><br></p>
+<div>
+    <ul class="navbar">
+        <li>
+            <img src="assets/Logo_FINKI_UKIM_EN.jpg" height="100" width="127.27"/>
+        </li>
+        <li>
+            <a href="index.html" class="navItem">About Us</a>
+        </li>
+        <li>
+            <a href="statistics.html" class="navItem">Statistics</a>
+        </li>
+    </ul>
+</div>
+<br><br><br><br><br>
+<span id="ticker">Ticker</span>
+<div>
+    <select id="selection">
+        <option value="ADIN">ADIN</option>
+        <option value="ALK">ALK</option>
+        <option value="ALKB">ALKB</option>
+        <option value="AMBR">AMBR</option>
+        <option value="AMEH">AMEH</option>
+    </select>
+</div>
+<table id="stats_table" border="1" style="width: 100%; margin-top: 20px; text-align: center;">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Last trade price</th>
+        <th>Max</th>
+        <th>Min</th>
+        <th>Avg. Price</th>
+        <th>% Change</th>
+        <th>Volume</th>
+        <th>Turnover in BEST (denars)</th>
+        <th>Total Turnover (denars)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows will be dynamically generated -->
+    </tbody>
+</table>
+</body>
+</html>
