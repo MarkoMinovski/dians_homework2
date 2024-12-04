@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0" version="24.8.3">
+  <diagram name="Page-1" id="q6Y4DJE6RRKYMWXtsjI4">
+    <mxGraphModel dx="819" dy="429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-30" value="&lt;div align=&quot;left&quot;&gt;Client&lt;/div&gt;" style="html=1;align=left;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=20;dashed=1;whiteSpace=wrap;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-32" value="&lt;div align=&quot;left&quot;&gt;Web Server&lt;br&gt;&lt;/div&gt;" style="html=1;align=left;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=20;dashed=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="270" width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-33" value="&lt;div align=&quot;left&quot;&gt;Application Server&lt;br&gt;&lt;/div&gt;" style="html=1;align=left;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=20;dashed=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="610" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-34" value="&lt;div&gt;Web Browser&lt;/div&gt;&lt;div&gt;(React + Vite)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="130" width="265" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-31" value="&lt;div&gt;Service Layer&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;(HTTP requests + Beautifulsoup4)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="307.5" y="400" width="265" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-36" value="&lt;div&gt;Integration Layer&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;(Python + Flask)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="307.5" y="490" width="265" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-40" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="410" y="635" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-43" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="645" as="sourcePoint" />
+            <mxPoint x="490" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-51" value="Write" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PTeoal3z36dQ_Fd3HFdt-43">
+          <mxGeometry x="0.1505" y="-2" relative="1" as="geometry">
+            <mxPoint x="8" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-45" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="645" as="sourcePoint" />
+            <mxPoint x="410" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-52" value="Read" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PTeoal3z36dQ_Fd3HFdt-45">
+          <mxGeometry x="0.2316" y="2" relative="1" as="geometry">
+            <mxPoint x="-8" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-49" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.225;exitY=0.006;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="PTeoal3z36dQ_Fd3HFdt-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="280" as="sourcePoint" />
+            <mxPoint x="370" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-50" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.234;exitY=0.027;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="187" as="sourcePoint" />
+            <mxPoint x="490" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PTeoal3z36dQ_Fd3HFdt-53" value="&lt;div&gt;Presentation Layer&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;(React DOM)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="310" width="265" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
