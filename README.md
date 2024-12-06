@@ -2,8 +2,8 @@
 
 ## Components
 
-- Frontend Component (Vite + React)
-- Backend Component (Flask/Python + requests, beautifulSoup4, PyMongo)
+- Frontend Component (Vite + React) | Repo: https://github.com/MarkoMinovski/frontend_homework2
+- Backend Component (Flask/Python + requests, beautifulSoup4, PyMongo) | Repo: https://github.com/MarkoMinovski/Backend_Homework2
 - Database (MongoDB Atlas Free tier)
 
 ## Features
