@@ -1,4 +1,4 @@
-# Second homework assignment Design and Architecture of Software 2024/2025
+# Homework assignment Design and Architecture of Software 2024/2025
 
 ## Components
 
