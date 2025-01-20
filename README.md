@@ -5,6 +5,7 @@
 - Frontend Component (django + bootstrap / d3js) | [Repository](https://github.com/MarkoMinovski/django_hw3)
 - Backend Component (Flask/Python + requests, beautifulSoup4, PyMongo) | [Repository](https://github.com/MarkoMinovski/Backend_Homework2)
 - Database (MongoDB Atlas Free tier)
+- Hosted on: Azure Web Apps -> [Azure](https://azure.microsoft.com/en-us/products/app-service/web)
 
 ## Features
 
